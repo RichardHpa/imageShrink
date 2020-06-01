@@ -1,23 +1,25 @@
 {
-  "name": "image-shrink",
-  "version": "1.0.0",
-  "description": "App to optimize images",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "author": "Richard Hpa",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^9.0.0"
-  },
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RichardHpa/imageShrink.git"
-  },
-  "bugs": {
-    "url": "https://github.com/RichardHpa/imageShrink/issues"
-  },
-  "homepage": "https://github.com/RichardHpa/imageShrink#readme"
+    "name": "image-shrink",
+    "version": "1.0.0",
+    "description": "App to optimize images",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "dev": "nodemon --exec electron ."
+    },
+    "author": "Richard Hpa",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^9.0.0",
+        "nodemon": "^2.0.4"
+    },
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RichardHpa/imageShrink.git"
+    },
+    "bugs": {
+        "url": "https://github.com/RichardHpa/imageShrink/issues"
+    },
+    "homepage": "https://github.com/RichardHpa/imageShrink#readme"
 }
