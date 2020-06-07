@@ -18,7 +18,7 @@ function createMainWindow() {
         backgroundColor: 'white'
     })
 
-    // mainnWinndow.loadURL(`file://${__dirname}/app/index.html`)
+    // mainWinndow.loadURL(`file://${__dirname}/app/index.html`)
     mainWindow.loadFile('./app/index.html')
 }
 
@@ -45,16 +45,38 @@ const menu = [
           ]
         : []),
     {
-        label: 'File',
-        submenu: [
-            {
-                label: 'Quit',
-                // accelerator: isMac ? 'Command+W' : 'Ctrl+W',
-                accelerator: 'CmdOrCtrl+W',
-                click: () => app.quit()
-            }
-        ]
-    }
+        // label: 'File',
+        // submenu: [
+        //     {
+        //         label: 'Quit',
+        //         // accelerator: isMac ? 'Command+W' : 'Ctrl+W',
+        //         accelerator: 'CmdOrCtrl+W',
+        //         click: () => app.quit()
+        //     }
+        // ]
+        role: 'fileMenu'
+    },
+    ...(isDev
+        ? [
+              {
+                  label: 'Developer',
+                  submenu: [
+                      {
+                          role: 'reload'
+                      },
+                      {
+                          role: 'forcereload'
+                      },
+                      {
+                          type: 'separator'
+                      },
+                      {
+                          role: 'toggledevtools'
+                      }
+                  ]
+              }
+          ]
+        : [])
 ]
 
 // if (isMac) {
